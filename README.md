@@ -1,2 +1,2 @@
-# Common_formatCheck
-前端常用的表单检验
+# Common_utils
+前端常用的工具函数
