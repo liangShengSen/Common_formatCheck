@@ -33,3 +33,18 @@ export const scrollTop = (number = 0, time) => { // number:距离顶部距离；
         }
     }, spacingTime);
 };
+// 获取对象中某个值,不存在返回null
+export const getValue = (i,k,d) => {
+    if (typeof d === 'undefined') { d = null; }
+    if (!k) return i;
+    var s = k.split('.');
+    var o = i;
+    for(var x = 0;x < s.length; x++){
+        if (null !== o && o.hasOwnProperty(s[x])){
+            o = o[s[x]];
+        }else{
+            return d;
+        }
+    }
+    return o;
+};
